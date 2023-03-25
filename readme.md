@@ -87,7 +87,7 @@ This can be instantiated as follows:
 &emsp; For Example 1, we consider the following differential equations:
 
 <center>f<sub>1</sub> = x<sub>2</sub>+2x<sub>1</sub>x<sub>2</sub></center>
-
+<br>
 <center>f<sub>2</sub> = -x<sub>1</sub>-x<sub>2</sub> *x<sub>2</sub>+2 x<sub>1</sub>*x<sub>1</sub></center>
 
 Construct the differential equations by setting
