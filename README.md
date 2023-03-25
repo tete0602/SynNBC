@@ -97,11 +97,7 @@ Then, the dynamical system should be confirmed in the Example function. The dyna
 For Example 1, we consider the following differential equations:
 
 $$
-\begin{cases}
-f_{1} = x_{2} + 2*x_{1}*x_{2}\\
-
-f_{2} = -x_{0} - x^{2}_{1} + 2 * x^{2}_{0}
-\end{cases}
+f_{1} = x_{2} + 2*x_{1}*x_{2}
 $$
 
 $$
