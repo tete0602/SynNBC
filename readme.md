@@ -99,6 +99,7 @@ For Example 1, we consider the following differential equations:
 $$
 f_{1} = x_{2} + 2*x_{1}*x_{2}
 $$
+
 $$
 f_{2} = -x_{0} - x^{2}_{1} + 2 * x^{2}_{0}
 $$
