@@ -72,9 +72,9 @@ At first, we should confirm the dimension `n` and three domains: `D_zones,I_zone
 **Example 1** &emsp; Suppose we wish to input the following domains:
 
 $$
-D\_zones = \{-2 \leq x_1 \leq 2 ,-2 \leq x_2 \leq 2\}\\
-I\_zones = \{0 \leq x_1 \leq 1 ,1 \leq x_2 \leq 2\}\\
-U\_zones = \{-2 \leq x_1 \leq -0.5 ,-0.75 \leq x_2 \leq 0.75\}\\
+D\_zones = \{-2 \leq x_1 \leq 2 ,-2 \leq x_2 \leq 2\} \\
+I\_zones = \{0 \leq x_1 \leq 1 ,1 \leq x_2 \leq 2\} \\
+U\_zones = \{-2 \leq x_1 \leq -0.5 ,-0.75 \leq x_2 \leq 0.75\} \\
 $$
 
 This can be instantiated as follows:
@@ -89,10 +89,11 @@ This can be instantiated as follows:
 Then, the dynamical system should be confirmed in the Example function. The dynamical system is modelled as differential equations `f`. We define the differential equations through lambda expressions. The variables $x_1,x_2,x_3,\cdots,x_n$ should be typed as $x[0], x[1], x[2], \cdots, x[n-1]$. All differential equations are input into the *f* list.
 
 For Example 1, we consider the following differential equations:
+
 $$
 \begin{cases}
-f_1 = x_2 + 2*x_1*x_2\\
-f_2 = -x_0 - x_1 ^ 2 + 2* x_0 ^ 2\\
+f_1 = x_2 + 2*x_1*x_2 \\
+f_2 = -x_0 - x_1 ^ 2 + 2* x_0 ^ 2 \\
 \end{cases}
 $$
 
