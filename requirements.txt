@@ -1,0 +1,9 @@
+matplotlib==3.5.3
+numpy==1.23.2
+scipy==1.9.0
+SumOfSquares==1.2.1
+sympy==1.11
+torch==1.12.1
+gurobipy==10.0.0
+mosek==10.0.30
+picos==2.4.11
