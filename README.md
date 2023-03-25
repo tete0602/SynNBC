@@ -72,11 +72,11 @@ At first, we should confirm the dimension `n` and three domains: `D_zones,I_zone
 **Example 1** &emsp; Suppose we wish to input the following domains:
 
 $$
-D{_}zones = \{-2 \leq x_1 \leq 2,-2 \leq x_2 \leq 2\}
+D_{_}zones = \{-2 \leq x_1 \leq 2,-2 \leq x_2 \leq 2\}
 $$
 
 $$
-I{_}zones = \{0 \leq x_1 \leq 1,1 \leq x_2 \leq 2\}
+I_{_}zones = \{0 \leq x_1 \leq 1,1 \leq x_2 \leq 2\}
 $$
 
 $$
