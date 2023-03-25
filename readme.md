@@ -97,10 +97,10 @@ Then, the dynamical system should be confirmed in the Example function. The dyna
 For Example 1, we consider the following differential equations:
 
 $$
-f_1 = x_2 + 2*x_1*x_2
+f_{1} = x_{2} + 2*x_{1}*x_{2}
 $$
 $$
-f_2 = -x_0 - x^{2}_{1} + 2 * x^{2}_{0}
+f_{2} = -x_{0} - x^{2}_{1} + 2 * x^{2}_{0}
 $$
 
 Construct the differential equations by setting
