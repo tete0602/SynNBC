@@ -51,12 +51,11 @@ class Cegis:
             print(f'iter: {i + 1} \nB = {B}')
             t3 = timeit.default_timer()
             Sos_Validator = SosValidator_B(self.ex, B)
-            t4 = timeit.default_timer()
-            t_sos += t4 - t3
             if Sos_Validator.SolveAll(deg=deg):
                 print('SOS verification passed!')
                 break
-
+            t4 = timeit.default_timer()
+            t_sos += t4 - t3
             # In the negative example of Lie derivative, the condition of B(x)==0 is relaxed to |B(x)|<=margin
             # to find a negative example, so the existence of a negative example does not mean that sos must
             # not be satisfied
