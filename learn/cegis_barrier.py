@@ -5,6 +5,7 @@ from utils.Config_B import CegisConfig
 from learn.net_B import Learner
 from verify.CounterExampleFind_B import CounterExampleFinder
 from verify.SosVerify_B import SosValidator_B
+from learn.save_result import SaveResult
 
 
 class Cegis:
@@ -29,6 +30,7 @@ class Cegis:
 
         self._assert_state()
         self._result = None
+        self.config = config
 
     def solve(self):
 
@@ -53,6 +55,10 @@ class Cegis:
             Sos_Validator = SosValidator_B(self.ex, B)
             if Sos_Validator.SolveAll(deg=deg):
                 print('SOS verification passed!')
+                t4 = timeit.default_timer()
+                t_sos += t4 - t3
+                saver = SaveResult(self.config, [t_learn, t_cex, t_sos, i + 1], B, self.Learner.net)
+                saver.save_all()
                 break
             t4 = timeit.default_timer()
             t_sos += t4 - t3
