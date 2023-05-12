@@ -19,6 +19,10 @@ class Example():
         self.name = name  # name or identifier
 
 
+def sin(x):
+    return x - x ** 3 / 6
+
+
 examples = {
     1: Example(
         n=7,
@@ -259,7 +263,7 @@ examples = {
             lambda x: x[1],
             lambda x: -16.3541 * x[1] - 15.3846 * x[0]
         ],
-        name='emsoft_c11_2_2',
+        name='emsoft_c11_2_2'
     ),
     20: Example(
         n=4,
@@ -272,7 +276,7 @@ examples = {
             lambda x: x[3],
             lambda x: -9.81 * x[0],
         ],
-        name='emsoft_c11_4_1',
+        name='emsoft_c11_4_1'
     ),
     21: Example(
         n=4,
@@ -285,7 +289,7 @@ examples = {
             lambda x: x[3],
             lambda x: 9.81 * x[0],
         ],
-        name='emsoft_c11_4_2',
+        name='emsoft_c11_4_2'
     ),
     22: Example(
         n=4,
@@ -299,7 +303,7 @@ examples = {
             lambda x: -x[0] * x[2],
             lambda x: -x[0] * x[3],
         ],
-        name='Raychaudhuri',
+        name='Raychaudhuri'
     ),
     23: Example(
         n=6,
@@ -314,7 +318,7 @@ examples = {
             lambda x: -2 * x[1] ** 3 - x[4] + x[5],
             lambda x: -3 * x[2] * x[3] - x[4] ** 3 - x[5],
         ],
-        name='sixdim',
+        name='sixdim'
     ),
     24: Example(
         n=10,
@@ -334,7 +338,7 @@ examples = {
             lambda x: 9.81 * x[1],
             lambda x: -9.81 * x[0]
         ],
-        name='dim_12_10',
+        name='dim_12_10'
     ),
     25: Example(
         n=8,
@@ -352,7 +356,7 @@ examples = {
             lambda x: 9.81 * x[1],
             lambda x: -9.81 * x[0]
         ],
-        name='dim_12_8',
+        name='dim_12_8'
     ),
     26: Example(
         n=6,
@@ -367,7 +371,96 @@ examples = {
             lambda x: x[1] * x[5] + (x[2] - x[3]) * x[4],
             lambda x: 2 * x[1] * x[4] - x[2] * x[5],
         ],
-        name='meym',
+        name='meym'
+    ),
+    27: Example(
+        n=3,
+        D_zones=[[-0.3, 0.3]] * 3,
+        I_zones=[[-0.3, 0]] + [[-0.2, 0.3]] * 2,
+        U_zones=[[-0.2, -0.15]] + [[-0.3, -0.25]] * 2,
+        f=[
+            lambda x: (x[1] + x[2]) / 100 + 1,
+            lambda x: x[2],
+            lambda x: -10 * (x[1] - x[1] ** 3 / 6) - x[1],
+        ],
+        name='sin_3'
+    ),
+    28: Example(
+        n=5,
+        D_zones=[[-0.3, 0.3]] * 5,
+        I_zones=[[-0.3, 0]] + [[-0.2, 0.3]] * 4,
+        U_zones=[[-0.2, -0.15]] + [[-0.3, -0.25]] * 4,
+        f=[
+            lambda x: (x[1] + x[2] + x[2] + x[3]) / 100 + 1,
+            lambda x: x[2],
+            lambda x: -10 * (x[1] - x[1] ** 3 / 6) - x[1],
+            lambda x: x[4],
+            lambda x: -10 * (x[3] - x[3] ** 3 / 6) - x[1],
+        ],
+        name='sin_5'
+    ),
+    29: Example(
+        n=7,
+        D_zones=[[-0.3, 0.3]] * 7,
+        I_zones=[[-0.3, 0]] + [[-0.2, 0.3]] * 6,
+        U_zones=[[-0.2, -0.15]] + [[-0.3, -0.25]] * 6,
+        f=[
+            lambda x: (x[1] + x[2] + x[2] + x[3] + x[3] + x[4]) / 100 + 1,
+            lambda x: x[2],
+            lambda x: -10 * (x[1] - x[1] ** 3 / 6) - x[1],
+            lambda x: x[4],
+            lambda x: -10 * (x[3] - x[3] ** 3 / 6) - x[1],
+            lambda x: x[6],
+            lambda x: -10 * (x[5] - x[5] ** 3 / 6) - x[1],
+        ],
+        name='sin_7'
+    ),
+    30: Example(
+        n=13,
+        D_zones=[[-0.3, 0.3]] * 13,
+        I_zones=[[-0.3, 0]] + [[-0.2, 0.3]] * 12,
+        U_zones=[[-0.2, -0.15]] + [[-0.3, -0.25]] * 12,
+        f=[
+            lambda x: (x[1] + x[2] + x[2] + x[3] + x[3] + x[4] + x[4] + x[5] + x[5] + x[6] + x[6] + x[7]) / 100 + 1,
+            lambda x: x[2],
+            lambda x: -10 * (x[1] - x[1] ** 3 / 6) - x[1],
+            lambda x: x[4],
+            lambda x: -10 * (x[3] - x[3] ** 3 / 6) - x[1],
+            lambda x: x[6],
+            lambda x: -10 * (x[5] - x[5] ** 3 / 6) - x[1],
+            lambda x: x[8],
+            lambda x: -10 * (x[7] - x[7] ** 3 / 6) - x[1],
+            lambda x: x[10],
+            lambda x: -10 * (x[9] - x[9] ** 3 / 6) - x[1],
+            lambda x: x[12],
+            lambda x: -10 * (x[11] - x[11] ** 3 / 6) - x[1],
+        ],
+        name='sin_13'
+    ),
+    31: Example(
+        n=15,
+        D_zones=[[-0.3, 0.3]] * 15,
+        I_zones=[[-0.3, 0]] + [[-0.2, 0.3]] * 14,
+        U_zones=[[-0.2, -0.15]] + [[-0.3, -0.25]] * 14,
+        f=[
+            lambda x: (x[1] + x[2] + x[2] + x[3] + x[3] + x[4] + x[4] + x[5] + x[5] + x[6] + x[6] + x[7] + x[7] + x[
+                8]) / 100 + 1,
+            lambda x: x[2],
+            lambda x: -10 * (x[1] - x[1] ** 3 / 6) - x[1],
+            lambda x: x[4],
+            lambda x: -10 * (x[3] - x[3] ** 3 / 6) - x[1],
+            lambda x: x[6],
+            lambda x: -10 * (x[5] - x[5] ** 3 / 6) - x[1],
+            lambda x: x[8],
+            lambda x: -10 * (x[7] - x[7] ** 3 / 6) - x[1],
+            lambda x: x[10],
+            lambda x: -10 * (x[9] - x[9] ** 3 / 6) - x[1],
+            lambda x: x[12],
+            lambda x: -10 * (x[11] - x[11] ** 3 / 6) - x[1],
+            lambda x: x[14],
+            lambda x: -10 * (x[13] - x[13] ** 3 / 6) - x[1],
+        ],
+        name='sin_15'
     )
 }
 
