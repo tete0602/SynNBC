@@ -19,10 +19,6 @@ class Example():
         self.name = name  # name or identifier
 
 
-def sin(x):
-    return x - x ** 3 / 6
-
-
 examples = {
     1: Example(
         n=7,
