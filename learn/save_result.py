@@ -21,8 +21,8 @@ class SaveResult:
     def save_txt(self, filepath):
         file_name = self.config.EXAMPLE.name + '.txt'
         filepath = os.path.join(filepath, file_name)
-        data = ["ACTIVATION", "N_HIDDEN_NEURONS", "MULTIPLICATOR", "BATCH_SIZE", "LEARNING_RATE",
-                "LOSS_WEIGHT", "MARGIN", "SPLIT_D", "DEG", "R_b"]
+        data = ["ACTIVATION", "N_HIDDEN_NEURONS", "MULTIPLICATOR", "MULTIPLICATOR_NET", "MULTIPLICATOR_ACT",
+                "BATCH_SIZE", "LEARNING_RATE", "LOSS_WEIGHT", "MARGIN", "SPLIT_D", "DEG", "R_b"]
         with open(filepath, 'a', encoding='utf-8') as f:
             f.write(f"time of recording: {datetime.now()}\n")
             f.write("The configuration information is as follows:\n")
