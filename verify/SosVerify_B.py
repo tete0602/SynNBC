@@ -92,16 +92,17 @@ class SosValidator_B():
         Init = self.SovleInit(deg[0])
         if not Init:
             print('The initial set is not satisfied.')
-
+            return False
         Unsafe = self.SovleUnsafe(deg[1])
         if not Unsafe:
             print('The unsafe set is not satisfied.')
-
+            return False
         DB = self.SolveDiffB(deg[2:])
         if not DB:
             print('The Lie derivative is not satisfied.')
+            return False
 
-        return Init & Unsafe & DB
+        return True
 
 
 if __name__ == '__main__':
