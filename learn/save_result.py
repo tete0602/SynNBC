@@ -1,8 +1,7 @@
 import os
 import csv
-
 import torch
-
+import sympy as sp
 from utils.Config_B import CegisConfig
 from benchmarks.Exampler_B import Example
 from datetime import datetime
@@ -17,6 +16,7 @@ class SaveResult:
         self.runtime = runtime
         self.B = str(B)
         self.net = NN
+        self.x = sp.symbols(['x{}'.format(i + 1) for i in range(config.EXAMPLE.n)])
 
     def save_txt(self, filepath):
         file_name = self.config.EXAMPLE.name + '.txt'
@@ -64,6 +64,21 @@ class SaveResult:
         filepath = os.path.join(filepath, file_name)
         torch.save(self.net.state_dict(), filepath)
 
+    def save_domain(self, filepath):
+        file_name = self.config.EXAMPLE.name + '_domain.txt'
+        filepath = os.path.join(filepath, file_name)
+        with open(filepath, 'w', newline='', encoding='utf-8') as f:
+            f.write('D_zones:\n')
+            f.write(str(self.config.EXAMPLE.D_zones))
+            f.write('\nI_zones:\n')
+            f.write(str(self.config.EXAMPLE.I_zones))
+            f.write('\nU_zones:\n')
+            f.write(str(self.config.EXAMPLE.U_zones))
+            f.write('\n###\n')
+            for i in range(self.config.EXAMPLE.n):
+                f.write(f'f[{i + 1}]={self.config.EXAMPLE.f[i](self.x)}\n')
+            f.write('###')
+
     def save_all(self):
         path = self.path + self.config.EXAMPLE.name
         if not os.path.exists(path):
@@ -71,6 +86,7 @@ class SaveResult:
         self.save_txt(path)
         self.save_csv(path)
         self.save_NN(path)
+        self.save_domain(path)
 
 
 if __name__ == '__main__':
@@ -101,6 +117,6 @@ if __name__ == '__main__':
         ".8936332256e-11*x2^2-1.46311839551e-09*x5^2-1.46311380156e-09*x7^2-2.15799504357e-09*x10^2-3.19654158345e-10" \
         "*x2*x5-3.19629800246e-10*x2*x7-2.56048044107e-09*x5*x7-2.00084051036e-12*x2*x10-1.07416966319e-10*x5*x10-1" \
         ".0742096333e-10*x7*x10"
-    s = SaveResult(con, [1, 1, 1, 1], B)
-    s.save_all()
+    # s = SaveResult(con, [1, 1, 1, 1], B)
+    # s.save_all()
     # s.save_txt()
