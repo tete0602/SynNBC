@@ -8,7 +8,7 @@ from plots.plot_barriers import plot_benchmark2d
 
 def main():
     activations = ['SKIP']  # Only "SQUARE","SKIP","MUL" are optional.
-    hidden_neurons = [5] * len(activations)
+    hidden_neurons = [10] * len(activations)
     example = get_example_by_name('emsoft_c2')
     start = timeit.default_timer()
     opts = {
@@ -21,7 +21,7 @@ def main():
         "MULTIPLICATOR_ACT": [],  # The activation function of each layer of the multiplier network;
         # since the last layer does not require an activation function, the number is one less than MULTIPLICATOR_NET.
         "BATCH_SIZE": 500,
-        "LEARNING_RATE": 0.2,
+        "LEARNING_RATE": 0.01,
         "MARGIN": 2.0,
         "LOSS_WEIGHT": (1.0, 1.0, 1.0),  # They are the weights of init loss, unsafe loss, and diffB loss.
         "SPLIT_D": True,  # Indicates whether to divide the region into 2^n small regions
