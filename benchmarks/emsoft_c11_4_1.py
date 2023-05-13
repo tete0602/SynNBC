@@ -8,27 +8,27 @@ from plots.plot_barriers import plot_benchmark2d
 
 def main():
     activations = ['SKIP']  # Only "SQUARE","SKIP","MUL" are optional.
-    hidden_neurons = [5] * len(activations)
-    example = get_example_by_name('emsoft_c11_2_1')
+    hidden_neurons = [20] * len(activations)
+    example = get_example_by_name('emsoft_c11_4_1')
     start = timeit.default_timer()
     opts = {
         "ACTIVATION": activations,
         "EXAMPLE": example,
         "N_HIDDEN_NEURONS": hidden_neurons,
         "MULTIPLICATOR": True,  # Whether to use multiplier.
-        "MULTIPLICATOR_NET": [],  # The number of nodes in each layer of the multiplier network;
+        "MULTIPLICATOR_NET": [10, 1],  # The number of nodes in each layer of the multiplier network;
         # if set to empty, the multiplier is a trainable constant.
-        "MULTIPLICATOR_ACT": [],  # The activation function of each layer of the multiplier network;
+        "MULTIPLICATOR_ACT": ['LINEAR'],  # The activation function of each layer of the multiplier network;
         # since the last layer does not require an activation function, the number is one less than MULTIPLICATOR_NET.
-        "BATCH_SIZE": 500,
-        "LEARNING_RATE": 0.05,
-        "MARGIN": 2,
+        "BATCH_SIZE": 5000,
+        "LEARNING_RATE": 0.001,
+        "MARGIN": 10,
         "LOSS_WEIGHT": (1.0, 1.0, 1.0),  # They are the weights of init loss, unsafe loss, and diffB loss.
         "SPLIT_D": True,  # Indicates whether to divide the region into 2^n small regions
         # when looking for negative examples, and each small region looks for negative examples separately.
         "DEG": [2, 2, 2, 2],  # Respectively represent the times of init, unsafe, diffB,
         # and unconstrained multipliers when verifying sos.
-        "R_b": 0.4,
+        "R_b": 0.99,
         "LEARNING_LOOPS": 100,
         "CHOICE": [0, 0, 0]  # For finding the negative example, whether to use the minimize function or the gurobi
         # solver to find the most value, 0 means to use the minimize function, 1 means to use the gurobi solver; the

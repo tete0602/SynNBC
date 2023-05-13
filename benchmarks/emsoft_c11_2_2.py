@@ -9,7 +9,7 @@ from plots.plot_barriers import plot_benchmark2d
 def main():
     activations = ['SKIP']  # Only "SQUARE","SKIP","MUL" are optional.
     hidden_neurons = [5] * len(activations)
-    example = get_example_by_name('emsoft_c11_2_1')
+    example = get_example_by_name('emsoft_c11_2_2')
     start = timeit.default_timer()
     opts = {
         "ACTIVATION": activations,
