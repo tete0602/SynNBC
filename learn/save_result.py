@@ -74,7 +74,8 @@ class SaveResult:
             f.write(str(self.config.EXAMPLE.I_zones))
             f.write('\nU_zones:\n')
             f.write(str(self.config.EXAMPLE.U_zones))
-            f.write('\n###\n')
+            f.write('\ndynamic system:\n')
+            f.write('###\n')
             for i in range(self.config.EXAMPLE.n):
                 f.write(f'f[{i + 1}]={self.config.EXAMPLE.f[i](self.x)}\n')
             f.write('###')
