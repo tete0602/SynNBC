@@ -6,7 +6,7 @@ from benchmarks.Exampler_B import get_example_by_name
 
 
 def main():
-    activations = ['SQUARE']  # Only "SQUARE","SKIP","MUL" are optional.
+    activations = ['SKIP']  # Only "SQUARE","SKIP","MUL" are optional.
     hidden_neurons = [10] * len(activations)
     example = get_example_by_name('hi_ord_6')
     start = timeit.default_timer()
@@ -20,14 +20,14 @@ def main():
         "MULTIPLICATOR_ACT": [],  # The activation function of each layer of the multiplier network;
         # since the last layer does not require an activation function, the number is one less than MULTIPLICATOR_NET.
         "BATCH_SIZE": 2000,
-        "LEARNING_RATE": 0.1,
+        "LEARNING_RATE": 0.5,
         "MARGIN": 2.0,
         "LOSS_WEIGHT": (1.0, 1.0, 1.0),  # They are the weights of init loss, unsafe loss, and diffB loss.
         "SPLIT_D": True,  # Indicates whether to divide the region into 2^n small regions
         # when looking for negative examples, and each small region looks for negative examples separately.
         "DEG": [2, 2, 2, 1],  # Respectively represent the times of init, unsafe, diffB,
         # and unconstrained multipliers when verifying sos.
-        "R_b": 0.7,
+        "R_b": 0.8,
         "LEARNING_LOOPS": 100,
         "CHOICE": [0, 0, 0]  # For finding the negative example, whether to use the minimize function or the gurobi
         # solver to find the most value, 0 means to use the minimize function, 1 means to use the gurobi solver; the

@@ -6,7 +6,7 @@ from benchmarks.Exampler_B import get_example_by_name
 
 
 def main():
-    activations = ['SQUARE']  # Only "SQUARE","SKIP","MUL" are optional.
+    activations = ['SKIP']  # Only "SQUARE","SKIP","MUL" are optional.
     hidden_neurons = [10] * len(activations)
     example = get_example_by_name('hi_ord_8')
     start = timeit.default_timer()
