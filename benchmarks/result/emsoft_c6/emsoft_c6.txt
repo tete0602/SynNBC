@@ -1,0 +1,24 @@
+time of recording: 2023-05-19 23:54:59.020689
+The configuration information is as follows:
+   ACTIVATION: ['SKIP']
+   N_HIDDEN_NEURONS: [5]
+   MULTIPLICATOR: True
+   MULTIPLICATOR_NET: [5, 5, 5, 1]
+   MULTIPLICATOR_ACT: ['LINEAR', 'LINEAR', 'LINEAR']
+   BATCH_SIZE: 2000
+   LEARNING_RATE: 0.2
+   LOSS_WEIGHT: (1.0, 1.0, 1.0)
+   MARGIN: 2.0
+   SPLIT_D: False
+   DEG: [2, 2, 2, 1]
+   R_b: 0.8
+
+The runtime is as follows:
+   Total learning time: 0.9887300659902394
+   Total counter-examples generating time: 0
+   Total sos verifying time: 0.3147256240481511
+
+The synthetic Barrier Certificate is as follows:
+   Iter: 1
+   B=10.5062606756731*x1**2 - 1.30303247619367*x1*x2 + 8.28704497757049*x1 + 9.8839089939809*x2**2 + 6.27780720630804*x2 - 3.36428625768626
+
