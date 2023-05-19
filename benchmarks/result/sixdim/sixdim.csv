@@ -1,0 +1,2 @@
+time of recording,name,n,nhl,nm,t_learn,t_cex,t_sos,rate,batch_size,iter,activation
+2023-05-19 21:27:16.209889,sixdim,6,10,[],5.88516168599017,7.306497300975025,11.706995631102473,0.01,1000,4,['SKIP']
