@@ -16,9 +16,9 @@ def main():
         "EXAMPLE": example,
         "N_HIDDEN_NEURONS": hidden_neurons,
         "MULTIPLICATOR": True,  # Whether to use multiplier.
-        "MULTIPLICATOR_NET": [],  # The number of nodes in each layer of the multiplier network;
+        "MULTIPLICATOR_NET": [10, 5, 1],  # The number of nodes in each layer of the multiplier network;
         # if set to empty, the multiplier is a trainable constant.
-        "MULTIPLICATOR_ACT": [],  # The activation function of each layer of the multiplier network;
+        "MULTIPLICATOR_ACT": ['LINEAR', 'LINEAR'],  # The activation function of each layer of the multiplier network;
         # since the last layer does not require an activation function, the number is one less than MULTIPLICATOR_NET.
         "BATCH_SIZE": 500,
         "LEARNING_RATE": 0.1,
@@ -28,7 +28,7 @@ def main():
         # when looking for negative examples, and each small region looks for negative examples separately.
         "DEG": [2, 2, 2, 1],  # Respectively represent the times of init, unsafe, diffB,
         # and unconstrained multipliers when verifying sos.
-        "R_b": 0.6,
+        "R_b": 0.3,
         "LEARNING_LOOPS": 100,
         "CHOICE": [0, 0, 0]  # For finding the negative example, whether to use the minimize function or the gurobi
         # solver to find the most value, 0 means to use the minimize function, 1 means to use the gurobi solver; the
