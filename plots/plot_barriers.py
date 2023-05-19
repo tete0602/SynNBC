@@ -49,7 +49,7 @@ def set_2d_labels_and_title(x_label, y_label, title):
 
 
 def plot_benchmark2d(ex: Example, B):
-    path = 'img/'
+    path = 'result/' + ex.name + '/'
     if not os.path.exists(path):
         os.mkdir(path)
     x = sp.symbols(['x{}'.format(i + 1) for i in range(ex.n)])
@@ -81,7 +81,6 @@ def plot_benchmark2d(ex: Example, B):
     # plot vector field
     plot_vector_field(ax, plot_limit, ex.f, plot_b, X, Y)
     set_2d_labels_and_title('$x_1$', '$x_2$', 'Barrier Border')
-
     plt.savefig(path + ex.name + '_barrier2d.pdf')
     plt.show()
 
