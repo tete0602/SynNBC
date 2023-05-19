@@ -16,9 +16,9 @@ def main():
         "EXAMPLE": example,
         "N_HIDDEN_NEURONS": hidden_neurons,
         "MULTIPLICATOR": True,  # Whether to use multiplier.
-        "MULTIPLICATOR_NET": [],  # The number of nodes in each layer of the multiplier network;
+        "MULTIPLICATOR_NET": [5, 1],  # The number of nodes in each layer of the multiplier network;
         # if set to empty, the multiplier is a trainable constant.
-        "MULTIPLICATOR_ACT": [],  # The activation function of each layer of the multiplier network;
+        "MULTIPLICATOR_ACT": ['LINEAR'],  # The activation function of each layer of the multiplier network;
         # since the last layer does not require an activation function, the number is one less than MULTIPLICATOR_NET.
         "BATCH_SIZE": 500,
         "LEARNING_RATE": 0.01,
