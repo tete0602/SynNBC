@@ -20,7 +20,7 @@ def main():
         "MULTIPLICATOR_ACT": [],  # The activation function of each layer of the multiplier network;
         # since the last layer does not require an activation function, the number is one less than MULTIPLICATOR_NET.
         "BATCH_SIZE": 2000,
-        "LEARNING_RATE": 0.2,
+        "LEARNING_RATE": 0.1,
         "MARGIN": 5.5,
         "LOSS_WEIGHT": (1.0, 1.0, 1.0),  # They are the weights of init loss, unsafe loss, and diffB loss.
         "SPLIT_D": True,  # Indicates whether to divide the region into 2^n small regions
