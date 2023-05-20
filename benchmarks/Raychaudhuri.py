@@ -22,7 +22,7 @@ def main():
         "BATCH_SIZE": 5000,
         "LEARNING_RATE": 0.05,
         "MARGIN": 2,
-        "LOSS_WEIGHT": (1.0, 1.0, 10.0),  # They are the weights of init loss, unsafe loss, and diffB loss.
+        "LOSS_WEIGHT": (1.0, 1.0, 20.0),  # They are the weights of init loss, unsafe loss, and diffB loss.
         "SPLIT_D": True,  # Indicates whether to divide the region into 2^n small regions
         # when looking for negative examples, and each small region looks for negative examples separately.
         "DEG": [2, 2, 2, 2],  # Respectively represent the times of init, unsafe, diffB,
