@@ -473,6 +473,66 @@ examples = {
             lambda x: -10 * (x[15] - x[15] ** 3 / 6) - x[1],
         ],
         name='sin_17'
+    ),
+    31: Example(
+        n=19,
+        D_zones=[[-0.3, 0.3]] * 19,
+        I_zones=[[-0.3, 0]] + [[-0.2, 0.3]] * 18,
+        U_zones=[[-0.2, -0.15]] + [[-0.3, -0.25]] * 18,
+        f=[
+            lambda x: (x[1] + x[2] + x[2] + x[3] + x[3] + x[4] + x[4] + x[5] + x[5] + x[6] + x[6] + x[7] + x[7] + x[8] +
+                       x[8] + x[9] + x[9] + x[10]) / 100 + 1,
+            lambda x: x[2],
+            lambda x: -10 * (x[1] - x[1] ** 3 / 6) - x[1],
+            lambda x: x[4],
+            lambda x: -10 * (x[3] - x[3] ** 3 / 6) - x[1],
+            lambda x: x[6],
+            lambda x: -10 * (x[5] - x[5] ** 3 / 6) - x[1],
+            lambda x: x[8],
+            lambda x: -10 * (x[7] - x[7] ** 3 / 6) - x[1],
+            lambda x: x[10],
+            lambda x: -10 * (x[9] - x[9] ** 3 / 6) - x[1],
+            lambda x: x[12],
+            lambda x: -10 * (x[11] - x[11] ** 3 / 6) - x[1],
+            lambda x: x[14],
+            lambda x: -10 * (x[13] - x[13] ** 3 / 6) - x[1],
+            lambda x: x[16],
+            lambda x: -10 * (x[15] - x[15] ** 3 / 6) - x[1],
+            lambda x: x[18],
+            lambda x: -10 * (x[17] - x[17] ** 3 / 6) - x[1],
+        ],
+        name='sin_19'
+    ),
+    32: Example(
+        n=21,
+        D_zones=[[-0.3, 0.3]] * 21,
+        I_zones=[[-0.3, 0]] + [[-0.2, 0.3]] * 20,
+        U_zones=[[-0.2, -0.15]] + [[-0.3, -0.25]] * 20,
+        f=[
+            lambda x: (x[1] + x[2] + x[2] + x[3] + x[3] + x[4] + x[4] + x[5] + x[5] + x[6] + x[6] + x[7] + x[7] + x[8] +
+                       x[8] + x[9] + x[9] + x[10] + x[10] + x[11]) / 100 + 1,
+            lambda x: x[2],
+            lambda x: -10 * (x[1] - x[1] ** 3 / 6) - x[1],
+            lambda x: x[4],
+            lambda x: -10 * (x[3] - x[3] ** 3 / 6) - x[1],
+            lambda x: x[6],
+            lambda x: -10 * (x[5] - x[5] ** 3 / 6) - x[1],
+            lambda x: x[8],
+            lambda x: -10 * (x[7] - x[7] ** 3 / 6) - x[1],
+            lambda x: x[10],
+            lambda x: -10 * (x[9] - x[9] ** 3 / 6) - x[1],
+            lambda x: x[12],
+            lambda x: -10 * (x[11] - x[11] ** 3 / 6) - x[1],
+            lambda x: x[14],
+            lambda x: -10 * (x[13] - x[13] ** 3 / 6) - x[1],
+            lambda x: x[16],
+            lambda x: -10 * (x[15] - x[15] ** 3 / 6) - x[1],
+            lambda x: x[18],
+            lambda x: -10 * (x[17] - x[17] ** 3 / 6) - x[1],
+            lambda x: x[20],
+            lambda x: -10 * (x[19] - x[19] ** 3 / 6) - x[1],
+        ],
+        name='sin_21'
     )
 }
 
