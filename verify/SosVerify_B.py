@@ -18,17 +18,42 @@ class SosValidator_B():
         self.var_count = 0
 
     def polynomial(self, deg=2):  # Generating polynomials of degree n-ary deg.
-        parameters = []
-        terms = []
-        exponents = list(product(range(deg + 1), repeat=self.n))  # Generate all possible combinations of indices.
-        exponents = [e for e in exponents if sum(e) <= deg]  # Remove items with a count greater than deg.
-        poly = 0
-        for e in exponents:  # Generate all items.
+        if deg == 2 and self.n > 17:
+            parameters = []
+            terms = []
+            poly = 0
             parameters.append(sp.symbols('parameter' + str(self.var_count)))
             self.var_count += 1
-            terms.append(reduce(lambda a, b: a * b, [self.x[i] ** exp for i, exp in enumerate(e)]))
-            poly += parameters[-1] * terms[-1]
-        return poly, parameters, terms
+            poly += parameters[-1]
+            terms.append(1)
+            for i in range(self.n):
+                parameters.append(sp.symbols('parameter' + str(self.var_count)))
+                self.var_count += 1
+                terms.append(self.x[i])
+                poly += parameters[-1] * terms[-1]
+                parameters.append(sp.symbols('parameter' + str(self.var_count)))
+                self.var_count += 1
+                terms.append(self.x[i] ** 2)
+                poly += parameters[-1] * terms[-1]
+            for i in range(self.n):
+                for j in range(i + 1, self.n):
+                    parameters.append(sp.symbols('parameter' + str(self.var_count)))
+                    self.var_count += 1
+                    terms.append(self.x[i] * self.x[j])
+                    poly += parameters[-1] * terms[-1]
+            return poly, parameters, terms
+        else:
+            parameters = []
+            terms = []
+            exponents = list(product(range(deg + 1), repeat=self.n))  # Generate all possible combinations of indices.
+            exponents = [e for e in exponents if sum(e) <= deg]  # Remove items with a count greater than deg.
+            poly = 0
+            for e in exponents:  # Generate all items.
+                parameters.append(sp.symbols('parameter' + str(self.var_count)))
+                self.var_count += 1
+                terms.append(reduce(lambda a, b: a * b, [self.x[i] ** exp for i, exp in enumerate(e)]))
+                poly += parameters[-1] * terms[-1]
+            return poly, parameters, terms
 
     def SovleInit(self, deg=2):
         prob_init = SOSProblem()
