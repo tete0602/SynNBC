@@ -101,7 +101,7 @@ f_{1} = x_{2} + 2*x_{1}*x_{2}
 $$
 
 $$
-f_{2} = -x_{0} - x^{2}_{1} + 2 * x^{2}_{0}
+f_{2} = -x_{0} - x_{1}*x_{1} + 2 * x_{0}*x_{0}
 $$
 
 Construct the differential equations by setting
