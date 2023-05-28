@@ -16,7 +16,7 @@ def gen_sample(center, sample_nums):
     return np.array(result)
 
 
-ex = get_example_by_name('barr_1')
+ex = get_example_by_name('F1')
 x = sp.symbols(['x1', 'x2'])
 B = "-0.105024223731795*x1**2 - 0.174331989689821*x1*x2 - 0.2335244231776*x1 + 0.0287380828434669*x2**2 - " \
     "0.657170092537081*x2 + 0.780483266656108"

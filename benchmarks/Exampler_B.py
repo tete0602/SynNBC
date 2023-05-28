@@ -45,7 +45,7 @@ examples = {
             lambda x: x[1] + 2 * x[0] * x[1],
             lambda x: -x[0] - x[1] ** 2 + 2 * x[0] ** 2
         ],
-        name='barr_1'
+        name='F1'  # F1
     ),
     3: Example(
         n=4,
@@ -57,7 +57,7 @@ examples = {
            lambda x: x[2],
            lambda x: - 3980 * x[3] - 4180 * x[2] - 2400 * x[1] - 576 * x[0]
            ],
-        name='hi_ord_4'
+        name='F3'  # F3
     ),
     4: Example(
         n=2,
@@ -67,7 +67,7 @@ examples = {
         f=[lambda x: -5.5 * x[1] + x[1] * x[1],
            lambda x: 6 * x[0] - x[0] * x[0],
            ],
-        name='emsoft_c1'
+        name='C1'  # C1
     ),
     5: Example(
         n=3,
@@ -78,7 +78,7 @@ examples = {
            lambda x: -x[2],
            lambda x: -x[0] - 2 * x[1] - x[2] + x[0] * x[0] * x[0],
            ],
-        name='emsoft_c2'
+        name='C8'  # C8
     ),
     6: Example(
         n=2,
@@ -88,7 +88,7 @@ examples = {
         f=[lambda x: -x[0] + 2 * x[0] * x[0] * x[0] * x[1] * x[1],
            lambda x: -x[1]
            ],
-        name='emsoft_c3'
+        name='C2'  # C2
     ),
     7: Example(
         n=2,
@@ -98,7 +98,7 @@ examples = {
         f=[lambda x: -1 + x[0] * x[0] + x[1] * x[1],
            lambda x: 5 * (-1 + x[0] * x[1])
            ],
-        name='emsoft_c4'
+        name='C3'  # C3
     ),
     8: Example(
         n=2,
@@ -108,7 +108,7 @@ examples = {
         f=[lambda x: x[0] - x[0] * x[0] * x[0] + x[1] - x[0] * x[1] * x[1],
            lambda x: -x[0] + x[1] - x[0] * x[0] * x[1] - x[1] * x[1] * x[1]
            ],
-        name='emsoft_c5'
+        name='C4'  # C4
     ),
     9: Example(
         n=2,
@@ -118,7 +118,7 @@ examples = {
         f=[lambda x: -2 * x[0] + x[0] * x[0] + x[1],
            lambda x: x[0] - 2 * x[1] + x[1] * x[1]
            ],
-        name='emsoft_c6'
+        name='C5'  # C5
     ),
     10: Example(
         n=2,
@@ -128,7 +128,7 @@ examples = {
         f=[lambda x: -x[0] + x[0] * x[1],
            lambda x: -x[1]
            ],
-        name='emsoft_c7'
+        name='C6'  # C6
     ),
     11: Example(
         n=2,
@@ -138,7 +138,7 @@ examples = {
         f=[lambda x: -x[0] + 2 * x[0] * x[0] * x[1],
            lambda x: -x[1]
            ],
-        name='emsoft_c8'
+        name='C7'  # C7
     ),
     12: Example(
         n=7,
@@ -153,7 +153,7 @@ examples = {
            lambda x: 0.5 * x[6] - 5 * x[4] * x[5],
            lambda x: -0.5 * x[6] + 5 * x[4] * x[5]
            ],
-        name='emsoft_c9'
+        name='C12'  # C12
     ),
     13: Example(
         n=9,
@@ -171,7 +171,7 @@ examples = {
             lambda x: 5 * x[6] - 2 * x[5] * x[7] + x[8] - 0.2 * x[7],
             lambda x: 2 * x[5] * x[7] - x[8]
         ],
-        name='emsoft_c10'
+        name='C14'  # C14
     ),
     14: Example(
         n=2,
@@ -182,7 +182,7 @@ examples = {
             lambda x: x[1],
             lambda x: -x[0] - x[1] + 1 / 3.0 * x[0] ** 3
         ],
-        name='barr_2'
+        name='F2'  # F2
     ),
     15: Example(
         n=6,
@@ -197,7 +197,7 @@ examples = {
             lambda x: x[5],
             lambda x: - 800 * x[5] - 2273 * x[4] - 3980 * x[3] - 4180 * x[2] - 2400 * x[1] - 576 * x[0]
         ],
-        name='hi_ord_6'
+        name='F4'  # F4
     ),
     16: Example(
         n=8,
@@ -215,7 +215,7 @@ examples = {
             lambda x: -20 * x[7] - 170 * x[6] - 800 * x[5] - 2273 * x[4] - 3980 * x[3] - 4180 * x[2] - 2400 * x[
                 1] - 576 * x[0]
         ],
-        name='hi_ord_8'
+        name='F5'  # F5
     ),
     17: Example(
         n=12,
@@ -236,7 +236,7 @@ examples = {
             lambda x: -9.81 * x[0],
             lambda x: -16.3541 * x[11] - 15.3846 * x[8]
         ],
-        name='emsoft_c11'
+        name='C16'  # C16
     ),
     18: Example(
         n=4,
@@ -250,7 +250,7 @@ examples = {
             lambda x: -x[0] * x[2],
             lambda x: -x[0] * x[3],
         ],
-        name='Raychaudhuri'
+        name='C9'  # C9
     ),
     19: Example(
         n=6,
@@ -265,7 +265,7 @@ examples = {
             lambda x: -2 * x[1] ** 3 - x[4] + x[5],
             lambda x: -3 * x[2] * x[3] - x[4] ** 3 - x[5],
         ],
-        name='sixdim'
+        name='C11'  # C11
     ),
     20: Example(
         n=10,
@@ -285,7 +285,7 @@ examples = {
             lambda x: 9.81 * x[1],
             lambda x: -9.81 * x[0]
         ],
-        name='dim_12_10'
+        name='C15'  # C15
     ),
     21: Example(
         n=8,
@@ -303,7 +303,7 @@ examples = {
             lambda x: 9.81 * x[1],
             lambda x: -9.81 * x[0]
         ],
-        name='dim_12_8'
+        name='C13'  # C13
     ),
     22: Example(
         n=6,
@@ -318,7 +318,7 @@ examples = {
             lambda x: x[1] * x[5] + (x[2] - x[3]) * x[4],
             lambda x: 2 * x[1] * x[4] - x[2] * x[5],
         ],
-        name='meym'
+        name='C10'  # C10
     ),
     23: Example(
         n=3,
@@ -330,7 +330,7 @@ examples = {
             lambda x: x[2],
             lambda x: -10 * (x[1] - x[1] ** 3 / 6) - x[1],
         ],
-        name='sin_3'
+        name='M1'  # M1
     ),
     24: Example(
         n=5,
@@ -344,7 +344,7 @@ examples = {
             lambda x: x[4],
             lambda x: -10 * (x[3] - x[3] ** 3 / 6) - x[1],
         ],
-        name='sin_5'
+        name='M2'  # M2
     ),
     25: Example(
         n=7,
@@ -360,7 +360,7 @@ examples = {
             lambda x: x[6],
             lambda x: -10 * (x[5] - x[5] ** 3 / 6) - x[1],
         ],
-        name='sin_7'
+        name='M3'  # M3
     ),
     26: Example(
         n=9,
@@ -378,7 +378,7 @@ examples = {
             lambda x: x[8],
             lambda x: -10 * (x[7] - x[7] ** 3 / 6) - x[1],
         ],
-        name='sin_9'
+        name='M4'  # M4
     ),
     27: Example(
         n=11,
@@ -398,7 +398,7 @@ examples = {
             lambda x: x[10],
             lambda x: -10 * (x[9] - x[9] ** 3 / 6) - x[1],
         ],
-        name='sin_11'
+        name='M5'  # M5
     ),
     28: Example(
         n=13,
@@ -420,7 +420,7 @@ examples = {
             lambda x: x[12],
             lambda x: -10 * (x[11] - x[11] ** 3 / 6) - x[1],
         ],
-        name='sin_13'
+        name='M6'  # M6
     ),
     29: Example(
         n=15,
@@ -445,7 +445,7 @@ examples = {
             lambda x: x[14],
             lambda x: -10 * (x[13] - x[13] ** 3 / 6) - x[1],
         ],
-        name='sin_15'
+        name='M7'  # M7
     ),
     30: Example(
         n=17,
@@ -472,7 +472,7 @@ examples = {
             lambda x: x[16],
             lambda x: -10 * (x[15] - x[15] ** 3 / 6) - x[1],
         ],
-        name='sin_17'
+        name='M8'  # M8
     ),
     31: Example(
         n=19,
@@ -501,7 +501,7 @@ examples = {
             lambda x: x[18],
             lambda x: -10 * (x[17] - x[17] ** 3 / 6) - x[1],
         ],
-        name='sin_19'
+        name='M9'  # M9
     )
 }
 

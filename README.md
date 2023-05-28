@@ -118,7 +118,7 @@ Construct the differential equations by setting
 After inputting the dimension, domains and `f`, we should define the example’s name. For instance, to create an example named `barr_1`, you need type:
 
 ```python
->> name = 'barr_1'
+>> name = 'F1'
 ```
 
 The completed example is following:
@@ -133,7 +133,7 @@ The completed example is following:
             lambda x: x[1] + 2 * x[0] * x[1],
             lambda x: -x[0] - x[1] ** 2 + 2 * x[0] ** 2
         ],
-        name='barr_1'
+        name='F1'
     ),
 ```
 
@@ -144,7 +144,7 @@ For Example 1, the code example is as follows:
 ```python
 >>  activations = ['SKIP']  # Only "SQUARE","SKIP","MUL" are optional.
 >>  hidden_neurons = [10] * len(activations)
->>  example = get_example_by_name('barr_1')
+>>  example = get_example_by_name('F1')
 >>  opts = {
         "ACTIVATION": activations,
         "EXAMPLE": example,

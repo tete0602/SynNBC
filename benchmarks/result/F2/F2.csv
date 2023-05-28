@@ -1,0 +1,2 @@
+time of recording,name,n,nhl,nm,t_learn,t_cex,t_sos,rate,batch_size,iter,activation
+2023-05-20 00:07:04.155141,F2,2,10,"[5, 5, 1]",0.29137327801436186,0,0.37869508599396795,0.1,500,1,['SKIP']

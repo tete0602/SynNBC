@@ -1,2 +1,0 @@
-time of recording,name,n,nhl,nm,t_learn,t_cex,t_sos,rate,batch_size,iter,activation
-2023-05-20 00:01:50.907971,emsoft_c7,2,5,"[5, 5, 5, 5, 1]",0.25064098997972906,0,0.3175024150405079,0.2,500,1,['SKIP']

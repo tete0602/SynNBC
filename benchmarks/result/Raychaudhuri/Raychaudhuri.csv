@@ -1,2 +1,0 @@
-time of recording,name,n,nhl,nm,t_learn,t_cex,t_sos,rate,batch_size,iter,activation
-2023-05-20 17:49:59.995927,Raychaudhuri,4,20,"[10, 10, 1]",13.226522137061693,2.7862467389786616,1.7758587760617957,0.05,5000,2,['SKIP']
