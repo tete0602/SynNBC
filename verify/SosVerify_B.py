@@ -18,7 +18,7 @@ class SosValidator_B():
         self.var_count = 0
 
     def polynomial(self, deg=2):  # Generating polynomials of degree n-ary deg.
-        if deg == 2 and self.n > 17:
+        if deg == 2 and self.n > 8:
             parameters = []
             terms = []
             poly = 0
