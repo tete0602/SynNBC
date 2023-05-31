@@ -24,7 +24,7 @@ def main():
         "LEARNING_RATE": 0.05,
         "LOSS_WEIGHT": (1.0, 1.0, 1.0),  # They are the weights of init loss, unsafe loss, and diffB loss.
         "MARGIN": 1.0,
-        "SPLIT_D": True,  # Indicates whether to divide the region into 2^n small regions
+        "SPLIT_D": False,  # Indicates whether to divide the region into 2^n small regions
         # when looking for negative examples, and each small region looks for negative examples separately.
         "DEG": [2, 2, 2, 1],  # Respectively represent the times of init, unsafe, diffB,
         # and unconstrained multipliers when verifying sos.
