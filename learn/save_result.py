@@ -60,7 +60,7 @@ class SaveResult:
             writer.writerow(data)
 
     def save_NN(self, filepath):
-        file_name = f'{self.config.EXAMPLE.name}_{datetime.now()} .pt'
+        file_name = self.config.EXAMPLE.name+'.pt'
         filepath = os.path.join(filepath, file_name)
         torch.save(self.net.state_dict(), filepath)
 
