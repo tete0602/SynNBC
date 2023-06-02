@@ -28,6 +28,7 @@ You need install required software packages listed below and setting up a MOSEK 
 2. Install the required software packages for using SynNBC:
 
     ```python
+    pip install cvxopt==1.3.0
     pip intsall matplotlib==3.5.3
     pip intsall numpy==1.23.2
     pip intsall scipy==1.9.0
