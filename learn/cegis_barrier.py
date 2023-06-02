@@ -1,6 +1,8 @@
 import torch
 import timeit
 import numpy as np
+
+import benchmarks.Exampler_B
 from utils.Config_B import CegisConfig
 from learn.net_B import Learner
 from verify.CounterExampleFind_B import CounterExampleFinder
@@ -33,6 +35,13 @@ class Cegis:
         self.config = config
 
     def solve(self):
+        # check_mosek
+        import mosek
+
+        with mosek.Env() as env:
+            with env.Task() as task:
+                task.optimize()
+                print('Mosek can be used normally.')
 
         S_i, S_u, S_d, Sdot_i, Sdot_u, Sdot_d = self.generate_data()
 
