@@ -9,7 +9,7 @@ from plots.plot_barriers import plot_benchmark2d
 def main():
     activations = ['SKIP']  # Only "SQUARE","SKIP","MUL" are optional.
     hidden_neurons = [10] * len(activations)
-    example = get_example_by_name('M9')
+    example = get_example_by_name('R5')
     start = timeit.default_timer()
     opts = {
         "ACTIVATION": activations,
@@ -21,12 +21,12 @@ def main():
         "MULTIPLICATOR_ACT": [],  # The activation function of each layer of the multiplier network;
         # since the last layer does not require an activation function, the number is one less than MULTIPLICATOR_NET.
         "BATCH_SIZE": 500,
-        "LEARNING_RATE": 0.05,
+        "LEARNING_RATE": 0.1,
         "LOSS_WEIGHT": (1.0, 1.0, 1.0),  # They are the weights of init loss, unsafe loss, and diffB loss.
-        "MARGIN": 1.0,
-        "SPLIT_D": False,  # Indicates whether to divide the region into 2^n small regions
+        "MARGIN": 0.5,
+        "SPLIT_D": True,  # Indicates whether to divide the region into 2^n small regions
         # when looking for negative examples, and each small region looks for negative examples separately.
-        "DEG": [2, 2, 2, 1],  # Respectively represent the times of init, unsafe, diffB,
+        "DEG": [2, 2, 2, 0],  # Respectively represent the times of init, unsafe, diffB,
         # and unconstrained multipliers when verifying sos.
         "R_b": 0.6,
         "LEARNING_LOOPS": 100,
