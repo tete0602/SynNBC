@@ -29,12 +29,12 @@ You need install required software packages listed below and setting up a MOSEK 
 
     ```python
     pip install cvxopt==1.3.0
-    pip intsall matplotlib==3.5.3
-    pip intsall numpy==1.23.2
-    pip intsall scipy==1.9.0
-    pip intsall SumOfSquares==1.2.1
-    pip intsall sympy==1.11
-    pip intsall torch==1.12.1
+    pip install matplotlib==3.5.3
+    pip install numpy==1.23.2
+    pip install scipy==1.9.0
+    pip install SumOfSquares==1.2.1
+    pip install sympy==1.11
+    pip install torch==1.12.1
     pip install Mosek==10.0.30
     pip install gurobipy==10.0.0
     pip install picos==2.4.11
